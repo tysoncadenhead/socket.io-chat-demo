@@ -16,14 +16,9 @@ io.sockets.on('connection', function (socket) {
     socket.emit('messages-available', messages);
 
     socket.on('add-message', function (data) {
-        var message = {
-            name: data.name,
-            message: data.message,
-            time: new Date()
-        };
-        messages.push(message);
+        messages.push(data);
         sockets.forEach(function (socket) {
-            socket.emit('message-added', message);
+            socket.emit('message-added', data);
         });
     });
 });
