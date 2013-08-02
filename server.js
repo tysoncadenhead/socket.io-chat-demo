@@ -9,10 +9,6 @@ app.use( express.static(__dirname + '/public'));
 
 server.listen(4000);
 
-app.get('/', function (req, res) {
-    res.sendfile(__dirname + '/index.html');
-});
-
 io.sockets.on('connection', function (socket) {
 
     sockets.push(socket);
