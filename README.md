@@ -5,7 +5,7 @@ This is an example of how easy it is to create realtime chat with Socket.io
 ## How to run it
 
 ```bash
-npm install socket.io-chat-demo
+git clone https://github.com/tysoncadenhead/socket.io-chat-demo
 cd socket.io-chat-demo
 npm install
 node server
